@@ -1,4 +1,4 @@
 android
 =======
 
-android practics
+android programming practices
