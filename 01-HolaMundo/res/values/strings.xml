@@ -3,5 +3,8 @@
 
     <string name="hello">Hello World, Main!</string>
     <string name="app_name">HolaMundo</string>
+    <string name="button">button</string>
+    <string name="A">letra a</string>
+    <string name="descipcion_de_la_imagen">descipcion de la imagen</string>
 
 </resources>
