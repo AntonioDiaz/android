@@ -19,7 +19,6 @@
  *    Authors: Roberto Calvo <rocapal [at] libresoft [dot] es>
  */
 
-
 package es.curso.android.HelloWorld;
 
 import es.curso.android.HelloWorld.R;
@@ -28,16 +27,15 @@ import android.os.Bundle;
 import android.util.Log;
 
 public class Main extends Activity {
-	
-	private static String TAG = "Main"; 
-	
-    /** Called when the activity is first created. */
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
-        
-        Log.e(TAG, "mensage");
-        
-    }
+
+	private static String TAG = "Main";
+
+	/** Called when the activity is first created. */
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.main_linear_layout);
+		Log.e(TAG, "mensage");
+
+	}
 }
