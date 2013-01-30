@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffee" >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffffdd"
+        android:gravity="left"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="4dp"
+            android:text="@string/titleLayouts"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#ffffaa"
+            android:gravity="left"
+            android:orientation="horizontal"
+            android:baselineAligned="false" >
+	        <LinearLayout
+	            xmlns:android="http://schemas.android.com/apk/res/android"
+	            android:layout_width="0dp"
+	            android:layout_height="fill_parent"
+	            android:layout_weight="1"
+	            android:background="#ffffaa"
+	            android:orientation="vertical" >
+            </LinearLayout>
+	        <LinearLayout
+	            xmlns:android="http://schemas.android.com/apk/res/android"
+	            android:layout_width="0dp"
+	            android:layout_height="fill_parent"
+	            android:layout_weight="5"
+	            android:background="#ffffaa"
+	            android:gravity="left"
+	            android:orientation="vertical" >
+	            <Button
+	                android:id="@+id/btFrame"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="left"
+	                android:text="@string/frame" />
+	
+	            <Button
+	                android:id="@+id/btLinearH"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="left"
+	                android:text="@string/linearH" />
+	
+	            <Button
+	                android:id="@+id/btLinearV"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="left"
+	                android:text="@string/linearV" />
+	
+	            <Button
+	                android:id="@+id/btRelative"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="left"
+	                android:text="@string/relative" />
+	
+	            <Button
+	                android:id="@+id/btTable"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="left"
+	                android:text="@string/table" />
+	
+	            <Button
+	                android:id="@+id/btCard"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="left"
+	                android:text="@string/social" />
+	        </LinearLayout>
+	        <LinearLayout
+	            xmlns:android="http://schemas.android.com/apk/res/android"
+	            android:layout_width="0dp"
+	            android:layout_height="fill_parent"
+	            android:layout_weight="1"
+	            android:background="#ffffaa"
+	            android:orientation="vertical" >
+            </LinearLayout>
+	        
+	    </LinearLayout>
+	</LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/license"
+        android:textColor="#000000"
+        android:background="#ffff00"
+        android:textSize="10sp" />
+
+</RelativeLayout>
