@@ -21,7 +21,6 @@
 
 package es.curso.android.lists;
 
-
 import java.util.ArrayList;
 import android.app.ListActivity;
 import android.content.Context;
@@ -35,146 +34,99 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class AdvanceList extends ListActivity 
-{
+public class AdvanceList extends ListActivity {
 	private MyAdapter mAdapter = null;
-	
-	
+
 	// We define a structure to save the data
-	public class Node 
-	{
+	public class Node {
 		public String mTitle;
 		public String mDescription;
 		public Integer mImageResource;
 	}
-	
+
 	// ArrayList
 	private static ArrayList<Node> mArray = new ArrayList<Node>();
-	
 
 	@Override
-    public void onCreate(Bundle savedInstanceState) 
-	{
-        super.onCreate(savedInstanceState);                       
-        setContentView(R.layout.list);
-        setData();
-        
-        mAdapter = new MyAdapter(this);
-        setListAdapter(mAdapter);			   
-	    	   
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.list);
+		setData();
+		mAdapter = new MyAdapter(this);
+		setListAdapter(mAdapter);
+
 	}
-	
-    protected void onListItemClick(ListView l, View v, int position, long id) 
-	{
 
-    	// Create a new intent to call other Activity. 
-    	// Using the methods "putExtra" we can
-    	// send data to the new activity
-    	
-    	Toast.makeText(this, mArray.get(position).mTitle, Toast.LENGTH_SHORT).show();
+	protected void onListItemClick(ListView l, View v, int position, long id) {
+		// Create a new intent to call other Activity.
+		// Using the methods "putExtra" we can
+		// send data to the new activity
+		Toast.makeText(this, mArray.get(position).mTitle, Toast.LENGTH_SHORT).show();
 	}
-	
-    
-    private void setData ()
-    {
 
-            mArray.clear();
+	private void setData() {
+		mArray.clear();
+		Node mynode = new Node();
+		// Restaurant 1
+		mynode.mTitle = this.getResources().getString(R.string.title1);
+		mynode.mDescription = this.getResources().getString(R.string.description1);
+		mynode.mImageResource = R.drawable.r1;
+		mArray.add(mynode);
+		// Restaurant 2
+		Node mynode2 = new Node();
+		mynode2.mTitle = this.getResources().getString(R.string.title2);
+		mynode2.mDescription = this.getResources().getString(R.string.description2);
+		mynode2.mImageResource = R.drawable.r2;
+		mArray.add(mynode2);
+		// Restaurant 3
+		Node mynode3 = new Node();
+		mynode3.mTitle = this.getResources().getString(R.string.title3);
+		mynode3.mDescription = this.getResources().getString(R.string.description3);
+		mynode3.mImageResource = R.drawable.r3;
+		mArray.add(mynode3);
+		mArray.addAll(mArray);
+	}
 
-            Node mynode = new Node();
-            
-
-            // Restaurant 1  
-            
-            
-            mynode.mTitle = this.getResources().getString(R.string.title1);
-            mynode.mDescription = this.getResources().getString(R.string.description1);
-            mynode.mImageResource = R.drawable.r1;
-
-            mArray.add(mynode);
-
-            //Restaurant 2
-            Node mynode2 = new Node();
-           
-            mynode2.mTitle = this.getResources().getString(R.string.title2);
-            mynode2.mDescription = this.getResources().getString(R.string.description2);
-            mynode2.mImageResource = R.drawable.r2;
-
-            mArray.add(mynode2);
-
-            
-            //Restaurant 3
-            Node mynode3 = new Node();
-            
-
-            mynode3.mTitle = this.getResources().getString(R.string.title3);
-            mynode3.mDescription = this.getResources().getString(R.string.description3);
-            mynode3.mImageResource = R.drawable.r3;
-
-            mArray.add(mynode3);
-            
-            mArray.addAll(mArray);
-
-    }
-
-    
-	
-	public static class MyAdapter extends BaseAdapter 
-	{
-        
+	public static class MyAdapter extends BaseAdapter {
 		private Context mContext;
-		
 		public MyAdapter(Context c) {
 			mContext = c;
 		}
 
 		@Override
 		public int getCount() {
-			// TODO Auto-generated method stub
 			return mArray.size();
 		}
 
 		@Override
 		public Object getItem(int position) {
-			// TODO Auto-generated method stub
 			return mArray.get(position);
 		}
 
 		@Override
 		public long getItemId(int position) {
-			// TODO Auto-generated method stub
 			return 0;
 		}
 
 		@Override
 		public View getView(int position, View convertView, ViewGroup parent) {
-			
 			View view = null;
-				
 			if (convertView == null) {
 				// Make up a new view
-				LayoutInflater inflater = (LayoutInflater) mContext
-						.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-				
+				LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 				view = inflater.inflate(R.layout.myitem2, null);
 			} else {
 				// Use convertView if it is available
 				view = convertView;
 			}
-							
-			
-			// Example to get an image resource	
+			// Example to get an image resource
 			ImageView img = (ImageView) view.findViewById(R.id.image);
-			img.setImageDrawable(mContext.getResources().getDrawable(mArray.get(position).mImageResource));			
-						
+			img.setImageDrawable(mContext.getResources().getDrawable(mArray.get(position).mImageResource));
 			TextView tTitle = (TextView) view.findViewById(R.id.title);
 			tTitle.setText(mArray.get(position).mTitle);
-			
 			TextView Tdescription = (TextView) view.findViewById(R.id.description);
 			Tdescription.setText(mArray.get(position).mDescription);
-			
 			return view;
-	
 		}
-
 	}
 }

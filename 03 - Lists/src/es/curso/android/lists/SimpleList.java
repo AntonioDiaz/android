@@ -19,7 +19,6 @@
  *
  */
 
-
 package es.curso.android.lists;
 
 import android.app.ListActivity;
@@ -30,42 +29,23 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-
 public class SimpleList extends ListActivity {
 
-	
-	private String[] testValues = new String[] {
-			"URJC",
-			"EOI",
-			"Android"
-	};
-	
+	private String[] testValues = new String[] { "URJC", "EOI", "Android" };
+
 	private ListView lv1 = null;
 	private ListAdapter la1 = null;
-	
+
 	@Override
-    public void onCreate(Bundle savedInstanceState) 
-	{                                           
-			   
-        super.onCreate(savedInstanceState);        
-        setContentView(R.layout.list);
-                        
-        lv1 = (ListView)findViewById(android.R.id.list);
-        
-        
-        la1 = new ArrayAdapter<String>(this,        							   
-        		                       android.R.layout.simple_list_item_1, 
-        		                       testValues);
-        
-        
-        lv1.setAdapter(la1);
-        
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.list);
+		lv1 = (ListView) findViewById(android.R.id.list);
+		la1 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, testValues);
+		lv1.setAdapter(la1);
 	}
-	
-	 protected void onListItemClick (ListView l, View v, int position, long id) 
-	 {	 		 
-		 
-		 Toast.makeText(this, testValues[position], Toast.LENGTH_SHORT).show();
-	 }
-	
+
+	protected void onListItemClick(ListView l, View v, int position, long id) {
+		Toast.makeText(this, testValues[position], Toast.LENGTH_SHORT).show();
+	}
 }
