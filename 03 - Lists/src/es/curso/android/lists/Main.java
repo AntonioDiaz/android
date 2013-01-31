@@ -54,10 +54,9 @@ public class Main extends Activity {
 		Intent i = null;
 		if (list == 1) {
 			i = new Intent(this, SimpleList.class);
-		 } else {
-			 if (list == 2) {
-				 i = new Intent(this, AdvanceList.class);
-			 }
+		 } 
+		 if (list == 2) {
+			 i = new Intent(this, AdvanceList.class);
 		 }
 		if (i != null) {
 			startActivity(i);
