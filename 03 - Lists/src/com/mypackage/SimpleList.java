@@ -19,7 +19,7 @@
  *
  */
 
-package es.curso.android.lists;
+package com.mypackage;
 
 import android.app.ListActivity;
 import android.os.Bundle;

@@ -19,9 +19,10 @@
  *
  */
 
-package es.curso.android.lists;
+package com.mypackage;
 
 import java.util.ArrayList;
+
 import android.app.ListActivity;
 import android.content.Context;
 import android.os.Bundle;
