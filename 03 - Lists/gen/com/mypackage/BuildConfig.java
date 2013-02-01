@@ -1,5 +1,5 @@
 /** Automatically generated file. DO NOT MODIFY */
-package es.curso.android.lists;
+package com.mypackage;
 
 public final class BuildConfig {
     public final static boolean DEBUG = true;

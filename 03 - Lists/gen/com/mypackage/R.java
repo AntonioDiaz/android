@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package es.curso.android.lists;
+package com.mypackage;
 
 public final class R {
     public static final class attr {
