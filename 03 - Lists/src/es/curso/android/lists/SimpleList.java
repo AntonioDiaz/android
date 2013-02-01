@@ -45,6 +45,7 @@ public class SimpleList extends ListActivity {
 		lv1.setAdapter(la1);
 	}
 
+	/**  */
 	protected void onListItemClick(ListView l, View v, int position, long id) {
 		Toast.makeText(this, testValues[position], Toast.LENGTH_SHORT).show();
 	}

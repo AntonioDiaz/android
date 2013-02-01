@@ -29,9 +29,8 @@ import android.widget.Button;
 
 public class Main extends Activity {
 
-	// Esta variable es un atributo de clase y su contexto es toda la clase
-	// Cualquier método de esta clase puede acceder a él
-	private Button btList, btAdvList;
+	private Button btList;
+	private Button btAdvList;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -40,22 +39,24 @@ public class Main extends Activity {
 		setupWidgets();
 	}
 
+	/** Inicializa los eventos de los botones. */
 	private void setupWidgets() {
-		// Obtenemos instancias del XML
 		btList = (Button) findViewById(R.id.btList);
-		btAdvList = (Button) findViewById(R.id.btAdvlist);
-		// Asignamos listener a los botones
 		btList.setOnClickListener(getOnClickDoSomething(1));
+		btAdvList = (Button) findViewById(R.id.btAdvlist);
 		btAdvList.setOnClickListener(getOnClickDoSomething(2));
 	}
 
-	// Este método lanza una nueva actividad dependiendo del parámetro
-	private void goLayout(final Integer list) {
+	/**
+	 * Este método lanza una nueva actividad dependiendo del parámetro
+	 * @param myListId
+	 */
+	private void goLayout(final Integer myListId) {
 		Intent i = null;
-		if (list == 1) {
+		if (myListId == 1) {
 			i = new Intent(this, SimpleList.class);
 		 } 
-		 if (list == 2) {
+		 if (myListId == 2) {
 			 i = new Intent(this, AdvanceList.class);
 		 }
 		if (i != null) {
@@ -63,8 +64,11 @@ public class Main extends Activity {
 		}
 	}
 
-	// Este método devuelve un listener que ejecutará el método goLayout
-	// con el valor 'layoutId' que le pasemos
+	/**
+	 * Este método devuelve un listener que ejecutará el método goLayout con el valor 'layoutId' que le pasemos
+	 * @param list
+	 * @return
+	 */
 	private View.OnClickListener getOnClickDoSomething(final Integer list) {
 		return new View.OnClickListener() {
 			@Override
@@ -73,5 +77,4 @@ public class Main extends Activity {
 			}
 		};
 	}
-
 }
