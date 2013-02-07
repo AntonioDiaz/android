@@ -58,6 +58,7 @@ public class AdvanceList extends ListActivity {
 
 	}
 
+	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
 		// Create a new intent to call other Activity.
 		// Using the methods "putExtra" we can

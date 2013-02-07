@@ -33,16 +33,15 @@ public class SimpleList extends ListActivity {
 
 	private String[] testValues = new String[] { "URJC", "EOI", "Android" };
 
-	private ListView lv1 = null;
-	private ListAdapter la1 = null;
-
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
+		ListAdapter myListAdapter;
+		ListView myListView;
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.list);
-		lv1 = (ListView) findViewById(android.R.id.list);
-		la1 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, testValues);
-		lv1.setAdapter(la1);
+		myListView = (ListView) findViewById(android.R.id.list);
+		myListAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, testValues);
+		myListView.setAdapter(myListAdapter);
 	}
 
 	/**  */
