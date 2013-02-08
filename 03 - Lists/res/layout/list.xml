@@ -10,12 +10,13 @@
 	    android:id="@+id/tvTexto"
 	    android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
-		android:text="@string/banner" 	  
+		android:text="@string/banner"
 		android:color="#000000"
-		android:background="#ffffff"/>
+		android:background="#ffff11"/>
     
 	<ListView android:id="@id/android:list"
 		android:layout_width="fill_parent"
-		android:layout_height="wrap_content"/>		
+		android:background="#ffaaaa"
+		android:layout_height="wrap_content"/>
 	
 </LinearLayout>
