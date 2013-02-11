@@ -24,5 +24,4 @@ public class EasyList extends ListActivity {
 	protected void onListItemClick(ListView l, View v, int position, long id) {
 		Toast.makeText(this, "Hola " + testValues[position], Toast.LENGTH_SHORT).show();
 	}
-
 }

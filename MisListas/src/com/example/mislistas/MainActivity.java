@@ -1,12 +1,12 @@
 package com.example.mislistas;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
+
+import com.example.mislistas.listeneres.ButtonEasyListeners;
+import com.example.mislistas.listeners.ButtonComplexListeners;
 
 public class MainActivity extends Activity {
 
@@ -14,14 +14,10 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		Button b1 = (Button)this.findViewById(R.id.button_easy_list);
-		b1.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				Intent newActivityIntent = new Intent (MainActivity.this, EasyList.class);
-				startActivity(newActivityIntent);			
-			}
-		});
+		Button bEasy = (Button)this.findViewById(R.id.button_easy_list);
+		bEasy.setOnClickListener(new ButtonEasyListeners (this));
+		Button bComplex = (Button)this.findViewById(R.id.button_complex_list);
+		bComplex.setOnClickListener(new ButtonComplexListeners (this));
 		
 		
 	}

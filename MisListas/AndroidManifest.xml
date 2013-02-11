@@ -21,8 +21,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="EasyList"></activity>
-        <activity android:name="ComplexList"></activity>
+        <activity android:name="com.example.mislistas.EasyList"></activity>
+        <activity android:name="com.example.mislistas.ComplexList"></activity>
     </application>
 
 </manifest>
