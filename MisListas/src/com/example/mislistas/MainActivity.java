@@ -5,8 +5,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.widget.Button;
 
-import com.example.mislistas.listeneres.ButtonEasyListeners;
 import com.example.mislistas.listeners.ButtonComplexListeners;
+import com.example.mislistas.listeners.ButtonEasyListeners;
 
 public class MainActivity extends Activity {
 
@@ -18,8 +18,6 @@ public class MainActivity extends Activity {
 		bEasy.setOnClickListener(new ButtonEasyListeners (this));
 		Button bComplex = (Button)this.findViewById(R.id.button_complex_list);
 		bComplex.setOnClickListener(new ButtonComplexListeners (this));
-		
-		
 	}
 
 	@Override
