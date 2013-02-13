@@ -22,7 +22,11 @@
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:layout_margin="5dp"
-		android:background="#ffffaa"/>
+		android:divider="@android:color/black"
+		android:dividerHeight="0.3sp"
+		android:fastScrollEnabled="true"
+		android:smoothScrollbar="true"
+		android:background="@android:color/white"/>
     
 
 </LinearLayout>
