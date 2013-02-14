@@ -5,14 +5,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class ComplexListAdapter extends BaseAdapter {
 
-	private String values[];
+	private Node values[];
 	Context context;
 	
-	public ComplexListAdapter(Context myContext, String[] myValues) {
+	public ComplexListAdapter(Context myContext, Node[] myValues) {
 		context = myContext;
 		values = myValues;
 	}
@@ -43,7 +44,9 @@ public class ComplexListAdapter extends BaseAdapter {
 			view = convertView;
 		}
 		TextView title = (TextView)view.findViewById(R.id.title);
-		title.setText(values[position]);
+		title.setText(values[position].getTitle());
+		ImageView imageView = (ImageView)view.findViewById(R.id.imagen);
+		imageView.setImageDrawable(view.getResources().getDrawable(values[position].getImgId()));
 		return view;
 	}
 

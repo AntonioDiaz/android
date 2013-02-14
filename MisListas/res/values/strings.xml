@@ -9,5 +9,6 @@
     <string name="complex_list">Lista Compleja:</string>
     <string name="easy_list_button">simple</string>
     <string name="complex_list_button">compleja</string>
+    <string name="tooltip">logo universidad</string>
 
 </resources>
