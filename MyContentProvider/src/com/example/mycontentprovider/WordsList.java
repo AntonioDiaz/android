@@ -1,5 +1,8 @@
 package com.example.mycontentprovider;
 
+import java.util.Arrays;
+import java.util.List;
+
 import android.app.ListActivity;
 import android.content.ContentValues;
 import android.database.Cursor;
@@ -22,18 +25,21 @@ public class WordsList extends ListActivity {
 		setContentView(R.layout.words);
 		
 		// Defines an object to contain the new values to insert
-		ContentValues mNewValues = new ContentValues();
 
 		/*
 		 * Sets the values of each column and inserts the word. The arguments to the "put"
 		 * method are "column name" and "value"
 		 */
-		mNewValues.put(UserDictionary.Words.APP_ID, "example.user");
-		mNewValues.put(UserDictionary.Words.LOCALE, "en_US");
-		mNewValues.put(UserDictionary.Words.WORD, "insert");
-		mNewValues.put(UserDictionary.Words.FREQUENCY, "100");
-
-		getContentResolver().insert(UserDictionary.Words.CONTENT_URI, mNewValues);
+		//	     List<String> locales = Arrays.asList(new String[]{"en_US", "zh_CN", "fr_FR", "en_GB", "en_US"});  
+		//		for (int i = 0; i < 200; i++) {
+		//			char c = (char)((i%26)+65);
+		//			ContentValues mNewValues = new ContentValues();
+		//			mNewValues.put(UserDictionary.Words.APP_ID, "example.user");
+		//			mNewValues.put(UserDictionary.Words.LOCALE, locales.get(1));
+		//			mNewValues.put(UserDictionary.Words.WORD, c + "myWord");
+		//			mNewValues.put(UserDictionary.Words.FREQUENCY, "100");
+		//			getContentResolver().insert(UserDictionary.Words.CONTENT_URI, mNewValues);
+		//		}
 		
 		
 		String[] myProjection = { UserDictionary.Words._ID, UserDictionary.Words.WORD, UserDictionary.Words.LOCALE };
