@@ -22,8 +22,7 @@ public class TimerListener implements OnClickListener {
 
 
 	@Override
-	public void onClick(View v) {
-		
+	public void onClick(View v) {		
 		timer.schedule(myTimerTask, MainActivity.TIMER_TASK_DELAY, MainActivity.TIMER_TASK_PERIOD);
 	}
 

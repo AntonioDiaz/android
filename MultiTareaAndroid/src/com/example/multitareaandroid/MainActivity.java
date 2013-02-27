@@ -47,6 +47,11 @@ public class MainActivity extends Activity {
 		button.setOnClickListener(this.createThreadStart());
 		button = (Button)findViewById(R.id.button_thread_stop);
 		button.setOnClickListener(this.createThreadStop());
+		/* AsyncTask. */
+		button = (Button)findViewById(R.id.button_asynctask_start);
+		button.setOnClickListener(this.createAsynctaskStart());
+		button = (Button)findViewById(R.id.button_asynctask_stop);
+		button.setOnClickListener(this.createAsynctaskStop());
 		/* Service. */
 		button = (Button)findViewById(R.id.button_service_start);
 		button.setOnClickListener(this.createServiceStart());
@@ -54,12 +59,33 @@ public class MainActivity extends Activity {
 		button.setOnClickListener(this.createServiceStop());
 	}
 	
+	private OnClickListener createAsynctaskStop() {
+		return new View.OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+				Toast.makeText(contexto, R.string.not_implemented, Toast.LENGTH_SHORT).show();
+			}
+		};
+	}
+	
+	
+	
+
+	private OnClickListener createAsynctaskStart() {
+		return new View.OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+				new MyAsyncTask(contexto).execute(null, null, null);
+				
+			}
+		};
+	}
+
 	private OnClickListener createServiceStop() {
 		return new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent myIntent = new Intent (contexto, MyService.class);
-				stopService(myIntent);
+				stopService(new Intent (contexto, MyService.class));
 			}
 		};
 	}
@@ -100,9 +126,6 @@ public class MainActivity extends Activity {
 			}
 		};
 	}
-	
-	
-	
 
 	/** Create the listener of start TimerTask button. */
 	private View.OnClickListener createTimerStart(){
@@ -184,6 +207,13 @@ public class MainActivity extends Activity {
 		}
 		if (myTimerTask != null) {
 			myTimerTask.cancel();
+		}
+	}
+	
+	/** Actualiza el texto del TextView, pensado para que sea actualizado desde un Service. */
+	public static void updateText(String newTxt){
+		if (MainActivity.MY_TEXT!=null) {
+			MainActivity.MY_TEXT.setText(newTxt);
 		}
 	}
 	

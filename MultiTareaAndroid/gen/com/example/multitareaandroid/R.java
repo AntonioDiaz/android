@@ -48,6 +48,7 @@ public final class R {
         public static final int menu_settings=0x7f040002;
         public static final int message_thread=0x7f040009;
         public static final int message_timer=0x7f040008;
+        public static final int not_implemented=0x7f04000e;
         public static final int service=0x7f04000d;
         public static final int thread=0x7f04000b;
         public static final int timertask=0x7f04000a;

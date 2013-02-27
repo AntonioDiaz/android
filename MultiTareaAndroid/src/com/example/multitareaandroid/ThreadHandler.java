@@ -20,7 +20,7 @@ public class ThreadHandler extends Thread {
 	@Override
 	public void run() {
 		Message msg = new Message();
-		Log.d ("jopetas", "shouldContinue" + shouldContinue);
+		Log.d (MainActivity.TAG, "shouldContinue" + shouldContinue);
 		if (!this.shouldContinue ) {
 			return;
 		}
@@ -46,7 +46,7 @@ public class ThreadHandler extends Thread {
 
 
 	public void setShouldContinue(boolean shouldContinue) {
-		Log.d ("joooo", "shouldContinue " + shouldContinue);
+		Log.d (MainActivity.TAG, "shouldContinue " + shouldContinue);
 		this.shouldContinue = shouldContinue;
 	}
 	

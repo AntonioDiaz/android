@@ -12,17 +12,18 @@ public class MyService extends Service {
 
 	public int contador;
 	private boolean stopNow;
+	private static final int DELAY = 3000; 
 	
 	@Override
 	public void onCreate() {
 		super.onCreate();
-		Log.d("zasentodalaboca", "onCreate de myService");
+		Log.d(MainActivity.TAG, "onCreate de myService");
 		initService();
 	}
 	
 	private void initService() {
-		myHandler.sendMessageDelayed(new Message(), 3000);
-		MainActivity.MY_TEXT.setText("contador " + contador);		
+		myHandler.sendMessageDelayed(new Message(), DELAY);
+		MainActivity.updateText("contador " + contador);
 	}
 
 	@Override
@@ -34,20 +35,19 @@ public class MyService extends Service {
 	public void onDestroy() {
 		super.onDestroy();
 		stopNow = true;
-		MainActivity.MY_TEXT.setText("");		
+		MainActivity.updateText("");		
 		Log.d("zasentodalaboca", "onDelete de myService");
 	}
 	
 	Handler myHandler = new Handler(new Callback() {
 		@Override
 		public boolean handleMessage(Message msg) {
-			contador += 3;
+			contador += (DELAY / 1000);
 			if (!stopNow) {
 				initService();
 			}
 			return true;
 		}
-	});
-	
+	});	
 }
 
