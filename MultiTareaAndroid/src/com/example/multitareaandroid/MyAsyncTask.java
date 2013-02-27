@@ -17,15 +17,15 @@ public class MyAsyncTask extends AsyncTask<Void, Integer, Integer> {
 	
 	public MyAsyncTask(Context myContext) {
 		contexto = myContext;
-		progressDialog = new ProgressDialog(contexto);
-		progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-		progressDialog.setTitle("ProgressDialog");
-		progressDialog.setMessage("progressDialog AsyncTask");
-		progressDialog.show();
 	}
 
 	@Override
 	protected void onPreExecute() {
+		progressDialog = new ProgressDialog(contexto);
+		progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+		progressDialog.setTitle("ProgressDialog");
+		progressDialog.setMessage("progressDialog AsyncTask");
+		progressDialog.show();		
 		Log.d(MainActivity.TAG, "doPreExecute");
 	}
 
@@ -72,7 +72,7 @@ public class MyAsyncTask extends AsyncTask<Void, Integer, Integer> {
 		}
 		Log.d(MainActivity.TAG, "doPostExecute");
 	}
-	
+
 	Handler myHandler = new Handler(new Callback() {
 		@Override
 		public boolean handleMessage(Message msg) {
