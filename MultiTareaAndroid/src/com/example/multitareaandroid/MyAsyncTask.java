@@ -17,7 +17,7 @@ public class MyAsyncTask extends AsyncTask<Void, Integer, Integer> {
 	
 	public MyAsyncTask(Context myContext) {
 		contexto = myContext;
-		progressDialog  = new ProgressDialog(contexto);
+		progressDialog = new ProgressDialog(contexto);
 		progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
 		progressDialog.setTitle("ProgressDialog");
 		progressDialog.setMessage("progressDialog AsyncTask");

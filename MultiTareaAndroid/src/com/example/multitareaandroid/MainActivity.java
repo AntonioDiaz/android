@@ -67,16 +67,12 @@ public class MainActivity extends Activity {
 			}
 		};
 	}
-	
-	
-	
 
 	private OnClickListener createAsynctaskStart() {
 		return new View.OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
 				new MyAsyncTask(contexto).execute(null, null, null);
-				
 			}
 		};
 	}
