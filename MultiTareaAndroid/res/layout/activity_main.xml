@@ -12,7 +12,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="@string/title"
-        android:textSize="16sp" />
+        android:textStyle="bold"
+        android:paddingBottom="10sp"
+        android:textSize="22sp" />
 
     <TableLayout
         android:id="@+id/my_table_layout"
@@ -32,6 +34,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/timertask"
                 android:textSize="16sp"
+                android:paddingRight="20sp"
                 android:textStyle="bold" />
 
             <Button
