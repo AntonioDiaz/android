@@ -22,6 +22,7 @@
             </intent-filter>
         </activity>
         <service android:name=".MyService"></service>
+        <activity android:name="com.example.multitareaandroid.LocationListActivity"></activity>
     </application>
 
 </manifest>

@@ -127,6 +127,27 @@
                 android:layout_height="wrap_content"
                 android:text="@string/button_stop" />
         </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gps_register"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <Button
+                android:id="@+id/button_register_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_start" />
+
+            <Button
+                android:id="@+id/button_register_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_view" />            
+            
+            
+        </TableRow>
     </TableLayout>
 
     <LinearLayout

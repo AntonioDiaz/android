@@ -57,8 +57,32 @@ public class MainActivity extends Activity {
 		button.setOnClickListener(this.createServiceStart());
 		button = (Button)findViewById(R.id.button_service_stop);
 		button.setOnClickListener(this.createServiceStop());
+		/* GPS register. */
+		button = (Button)findViewById(R.id.button_register_start);
+		button.setOnClickListener(this.createRegisterStart());
+		button = (Button)findViewById(R.id.button_register_view);
+		button.setOnClickListener(this.createRegisterView());
+		
+		
 	}
 	
+	private OnClickListener createRegisterStart() {
+		return new View.OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+				Toast.makeText(contexto, R.string.not_implemented, Toast.LENGTH_SHORT).show();
+			}
+		};
+	}
+	
+	private OnClickListener createRegisterView() {
+		return new View.OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+				startActivity(new Intent(contexto, LocationListActivity.class));
+			}
+		};
+	}
 	private OnClickListener createAsynctaskStop() {
 		return new View.OnClickListener() {
 			@Override

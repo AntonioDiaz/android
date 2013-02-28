@@ -8,6 +8,7 @@
     <string name="button_start">start</string>
     <string name="button_stop">stop</string>
     <string name="button_timer">timer task</string>
+    <string name="button_view">view</string>
     <string name="button_thread">thread</string>
     <string name="message_timer">Hello timer: %1$d</string>
     <string name="message_thread">Segundos ejecutandose %1$d</string>
@@ -15,5 +16,7 @@
     <string name="thread">Thread</string>
     <string name="asyncTask">AsyncTask</string>
     <string name="service">Service</string>
+    <string name="gps_register">GPS register</string>
     <string name="not_implemented">not implemented yet</string>
+    <string name="location_list_title">Locations list</string>
 </resources>
