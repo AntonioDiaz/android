@@ -16,16 +16,18 @@ public final class R {
     public static final class id {
         public static final int button_asynctask_start=0x7f070009;
         public static final int button_asynctask_stop=0x7f07000a;
+        public static final int button_register_start=0x7f07000e;
+        public static final int button_register_view=0x7f07000f;
         public static final int button_service_start=0x7f07000c;
         public static final int button_service_stop=0x7f07000d;
         public static final int button_thread_start=0x7f070006;
         public static final int button_thread_stop=0x7f070007;
         public static final int button_timer_start=0x7f070003;
         public static final int button_timer_stop=0x7f070004;
-        public static final int menu_settings=0x7f07000f;
+        public static final int menu_settings=0x7f070011;
         public static final int my_table_layout=0x7f070001;
         public static final int texto_AsyncTask=0x7f070008;
-        public static final int texto_actualizable=0x7f07000e;
+        public static final int texto_actualizable=0x7f070010;
         public static final int texto_service=0x7f07000b;
         public static final int texto_thread=0x7f070005;
         public static final int texto_timer=0x7f070002;
@@ -33,25 +35,29 @@ public final class R {
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
+        public static final int location_list=0x7f030001;
     }
     public static final class menu {
         public static final int activity_main=0x7f060000;
     }
     public static final class string {
         public static final int app_name=0x7f040000;
-        public static final int asyncTask=0x7f04000c;
+        public static final int asyncTask=0x7f04000d;
         public static final int button_start=0x7f040004;
         public static final int button_stop=0x7f040005;
-        public static final int button_thread=0x7f040007;
+        public static final int button_thread=0x7f040008;
         public static final int button_timer=0x7f040006;
+        public static final int button_view=0x7f040007;
+        public static final int gps_register=0x7f04000f;
         public static final int hello_world=0x7f040001;
+        public static final int location_list_title=0x7f040011;
         public static final int menu_settings=0x7f040002;
-        public static final int message_thread=0x7f040009;
-        public static final int message_timer=0x7f040008;
-        public static final int not_implemented=0x7f04000e;
-        public static final int service=0x7f04000d;
-        public static final int thread=0x7f04000b;
-        public static final int timertask=0x7f04000a;
+        public static final int message_thread=0x7f04000a;
+        public static final int message_timer=0x7f040009;
+        public static final int not_implemented=0x7f040010;
+        public static final int service=0x7f04000e;
+        public static final int thread=0x7f04000c;
+        public static final int timertask=0x7f04000b;
         public static final int title=0x7f040003;
     }
     public static final class style {
