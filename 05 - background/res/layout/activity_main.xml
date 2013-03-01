@@ -141,12 +141,15 @@
                 android:text="@string/button_start" />
 
             <Button
+                android:id="@+id/button_register_stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_stop" />            
+            <Button
                 android:id="@+id/button_register_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/button_view" />            
-            
-            
         </TableRow>
     </TableLayout>
 

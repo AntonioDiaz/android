@@ -60,6 +60,8 @@ public class MainActivity extends Activity {
 		/* GPS register. */
 		button = (Button)findViewById(R.id.button_register_start);
 		button.setOnClickListener(this.createRegisterStart());
+		button = (Button)findViewById(R.id.button_register_stop);
+		button.setOnClickListener(this.createRegisterStop());
 		button = (Button)findViewById(R.id.button_register_view);
 		button.setOnClickListener(this.createRegisterView());
 		
@@ -70,7 +72,15 @@ public class MainActivity extends Activity {
 		return new View.OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
-				Toast.makeText(contexto, R.string.not_implemented, Toast.LENGTH_SHORT).show();
+				startService(new Intent(contexto, RegisterService.class));
+			}
+		};
+	}
+	private OnClickListener createRegisterStop() {
+		return new View.OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+				stopService(new Intent(contexto, RegisterService.class));
 			}
 		};
 	}

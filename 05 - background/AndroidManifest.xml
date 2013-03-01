@@ -22,7 +22,8 @@
             </intent-filter>
         </activity>
         <service android:name=".MyService"></service>
-        <activity android:name="com.example.multitareaandroid.LocationListActivity"></activity>
+        <service android:name=".RegisterService"></service>
+        <activity android:name=".LocationListActivity"></activity>
     </application>
 
 </manifest>

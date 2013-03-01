@@ -36,7 +36,7 @@ public class MyService extends Service {
 		super.onDestroy();
 		stopNow = true;
 		MainActivity.updateText("");		
-		Log.d("zasentodalaboca", "onDelete de myService");
+		Log.d(MainActivity.TAG, "onDelete de myService");
 	}
 	
 	Handler myHandler = new Handler(new Callback() {
