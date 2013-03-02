@@ -17,17 +17,18 @@ public final class R {
         public static final int button_asynctask_start=0x7f070009;
         public static final int button_asynctask_stop=0x7f07000a;
         public static final int button_register_start=0x7f07000e;
-        public static final int button_register_view=0x7f07000f;
+        public static final int button_register_stop=0x7f07000f;
+        public static final int button_register_view=0x7f070010;
         public static final int button_service_start=0x7f07000c;
         public static final int button_service_stop=0x7f07000d;
         public static final int button_thread_start=0x7f070006;
         public static final int button_thread_stop=0x7f070007;
         public static final int button_timer_start=0x7f070003;
         public static final int button_timer_stop=0x7f070004;
-        public static final int menu_settings=0x7f070011;
+        public static final int menu_settings=0x7f070012;
         public static final int my_table_layout=0x7f070001;
         public static final int texto_AsyncTask=0x7f070008;
-        public static final int texto_actualizable=0x7f070010;
+        public static final int texto_actualizable=0x7f070011;
         public static final int texto_service=0x7f07000b;
         public static final int texto_thread=0x7f070005;
         public static final int texto_timer=0x7f070002;
@@ -70,17 +71,6 @@ public final class R {
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
         
-
-        Base application theme for API 11+. This theme completely replaces
-        AppBaseTheme from res/values/styles.xml on API 11+ devices.
-    
- API 11 theme customizations can go here. 
-
-        Base application theme for API 14+. This theme completely replaces
-        AppBaseTheme from BOTH res/values/styles.xml and
-        res/values-v11/styles.xml on API 14+ devices.
-    
- API 14 theme customizations can go here. 
          */
         public static final int AppBaseTheme=0x7f050000;
         /**  Application theme. 

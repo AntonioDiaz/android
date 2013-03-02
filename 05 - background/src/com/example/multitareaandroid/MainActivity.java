@@ -5,6 +5,7 @@ import java.util.Timer;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.location.Location;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Handler.Callback;
@@ -25,6 +26,7 @@ public class MainActivity extends Activity {
 	
 	public static TextView MY_TEXT;
 	
+	
 	private Timer timer;
 	private MyTimerTask myTimerTask;
 	private ThreadHandler threadHandler;
@@ -34,8 +36,10 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		MainActivity.MY_TEXT = (TextView)findViewById(R.id.texto_actualizable);
 		contexto = this;
+		MainActivity.MY_TEXT = (TextView)findViewById(R.id.texto_actualizable);
+		ServiceGPS.setiLocation(new ILocationImp());
+		startService(new Intent(contexto, ServiceGPS.class));
 		Button button;
 		/* TimerTask. */
 		button = (Button)findViewById(R.id.button_timer_start);
@@ -236,6 +240,8 @@ public class MainActivity extends Activity {
 		if (myTimerTask != null) {
 			myTimerTask.cancel();
 		}
+		stopService(new Intent(contexto, MyService.class));
+		stopService(new Intent(contexto, ServiceGPS.class));
 	}
 	
 	/** Actualiza el texto del TextView, pensado para que sea actualizado desde un Service. */
@@ -243,6 +249,5 @@ public class MainActivity extends Activity {
 		if (MainActivity.MY_TEXT!=null) {
 			MainActivity.MY_TEXT.setText(newTxt);
 		}
-	}
-	
+	}	
 }
