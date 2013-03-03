@@ -9,21 +9,66 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="5dp"
         android:text="@string/title"
         android:textSize="18sp" />
 
-    <Button
-        android:id="@+id/button_fragment"
+    <TableLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="@string/fragments"
-        android:textSize="14sp" />
-
-    <LinearLayout
-        android:id="@+id/container"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
-    </LinearLayout>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_fragment_01" />
+
+            <Button
+                android:id="@+id/button_fragment_01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/view"
+                android:textSize="14sp" />
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_fragment_02" />
+
+            <Button
+                android:id="@+id/button_fragment_02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/view"
+                android:textSize="14sp" />
+        </TableRow>  
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_fragment_03" />
+
+            <Button
+                android:id="@+id/button_fragment_03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/view"
+                android:textSize="14sp" />
+        </TableRow>              
+    </TableLayout>
 
 </LinearLayout>

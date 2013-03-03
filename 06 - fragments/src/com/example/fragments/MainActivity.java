@@ -1,70 +1,59 @@
 package com.example.fragments;
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.example.fragments.FormFragment.FormListener;
+public class MainActivity extends Activity {
 
-public class MainActivity extends FragmentActivity implements FormListener{
-
+	private Context context;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		Button button = (Button)findViewById(R.id.button_fragment);
-		button.setOnClickListener( new OnClickListener() {
+		context = this;
+		Button button;
+		button = (Button)findViewById(R.id.button_fragment_01);
+		button.setOnClickListener(createListener01());
+		button = (Button)findViewById(R.id.button_fragment_02);
+		button.setOnClickListener(createListenerMobil());
+		button = (Button)findViewById(R.id.button_fragment_03);
+		button.setOnClickListener(createListenerTablet());
+		
+	}
+	
+	
+	private View.OnClickListener createListener01() {
+		return new OnClickListener() {			
 			@Override
 			public void onClick(View v) {
-				showFragment();
-				//hideFragment();
+				startActivity(new Intent(context, FragmentSimpleActivity.class));
 			}
-		});
-	}
-
-	private void showFragment() {
-		FragmentManager fm = getSupportFragmentManager();
-		Fragment editor = fm.findFragmentByTag("editor");
-		if (editor == null) {
-			FragmentTransaction ft = fm.beginTransaction();
-			ft.add(R.id.container, new FormFragment(), "editor");
-			ft.commit();
-		}
-		
+		};
 	}
 	
-	private void hideFragment() {
+	private View.OnClickListener createListenerMobil() {
+		return new OnClickListener() {			
+			@Override
+			public void onClick(View v) {
+				Toast.makeText(context, "not implemented, yet", Toast.LENGTH_SHORT).show();
+			}
+		};
 	}
 	
+	private View.OnClickListener createListenerTablet() {
+		return new OnClickListener() {			
+			@Override
+			public void onClick(View v) {
+				Toast.makeText(context, "not implemented, yet", Toast.LENGTH_SHORT).show();
+			}
+		};
+	}
 	
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.activity_main, menu);
-		return true;
-	}
-
-	@Override
-	public void pushOk(String text) {
-		Toast.makeText(this, "se pulso Ok..." + text, Toast.LENGTH_SHORT).show();
-	}
-
-	@Override
-	public void pushCancel(String text) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void pushText(String text) {
-		// TODO Auto-generated method stub
-		
-	}
-
 }

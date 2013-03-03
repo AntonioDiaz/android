@@ -5,7 +5,12 @@
     <string name="hello_fragments">Hello fragments!</string>
     <string name="menu_settings">Settings</string>
     <string name="fragments">fragments</string>
-    <string name="test">test</string>
     <string name="title">Fragments examples</string>
-
+    <string name="show">show</string>
+    <string name="hide">hide</string>
+    <string name="test">Test</string>
+    <string name="view">view</string>
+    <string name="title_fragment_01">Fragment simple</string>
+    <string name="title_fragment_02">Fragment list mobil</string>
+    <string name="title_fragment_03">Fragment list tablet</string>    
 </resources>

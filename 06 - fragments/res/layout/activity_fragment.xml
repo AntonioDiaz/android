@@ -9,7 +9,7 @@
         android:id="@+id/my_textview"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="dddd" />
+        android:text="" />
 
     <LinearLayout
         android:layout_width="match_parent"
