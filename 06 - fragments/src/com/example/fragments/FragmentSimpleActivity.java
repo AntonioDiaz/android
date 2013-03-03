@@ -57,7 +57,7 @@ public class FragmentSimpleActivity extends FragmentActivity implements IFormLis
 
 	@Override
 	public void pushOk(String text) {
-		Toast.makeText(context, "OK", Toast.LENGTH_SHORT).show();
+		Toast.makeText(context, "OK " + text, Toast.LENGTH_SHORT).show();
 	}
 
 	@Override
