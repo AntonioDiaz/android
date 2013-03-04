@@ -1,4 +1,4 @@
-package com.example.fragments;
+package com.example.fragments.simple;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
@@ -10,13 +10,15 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.fragments.R;
+
 public class FragmentSimpleActivity extends FragmentActivity implements IFormListener {
 
 	private Context context;
 
 	protected void onCreate(android.os.Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_fragment_01);
+		setContentView(R.layout.activity_fragment_simple);
 		context = this;
 		Button button = (Button) findViewById(R.id.button_show);
 		button.setOnClickListener(createListenerShow());

@@ -9,6 +9,10 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.fragments.list.MobileListActivity;
+import com.example.fragments.simple.FragmentSimpleActivity;
+import com.example.fragments.withoutfragments.ListNoFragmentsActivity;
+
 public class MainActivity extends Activity {
 
 	private Context context;
@@ -19,17 +23,27 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		context = this;
 		Button button;
-		button = (Button)findViewById(R.id.button_fragment_01);
-		button.setOnClickListener(createListener01());
-		button = (Button)findViewById(R.id.button_fragment_02);
+		button = (Button)findViewById(R.id.button_fragment_simple);
+		button.setOnClickListener(createListenerSimple());
+		button = (Button)findViewById(R.id.button_no_fragments);
+		button.setOnClickListener(createListenerNoFragments());		
+		button = (Button)findViewById(R.id.button_fragment_mobile);
 		button.setOnClickListener(createListenerMobil());
-		button = (Button)findViewById(R.id.button_fragment_03);
+		button = (Button)findViewById(R.id.button_fragment_tablet);
 		button.setOnClickListener(createListenerTablet());
-		
 	}
 	
 	
-	private View.OnClickListener createListener01() {
+	private View.OnClickListener createListenerNoFragments() {
+		return new OnClickListener() {			
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(context, ListNoFragmentsActivity.class));
+			}
+		};
+	}
+	
+	private View.OnClickListener createListenerSimple() {
 		return new OnClickListener() {			
 			@Override
 			public void onClick(View v) {
@@ -42,7 +56,7 @@ public class MainActivity extends Activity {
 		return new OnClickListener() {			
 			@Override
 			public void onClick(View v) {
-				Toast.makeText(context, "not implemented, yet", Toast.LENGTH_SHORT).show();
+				startActivity(new Intent(context, MobileListActivity.class));
 			}
 		};
 	}

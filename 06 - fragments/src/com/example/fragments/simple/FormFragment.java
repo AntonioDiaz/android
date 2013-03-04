@@ -1,4 +1,4 @@
-package com.example.fragments;
+package com.example.fragments.simple;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -9,6 +9,8 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.example.fragments.R;
 
 public class FormFragment extends Fragment {
 
@@ -40,7 +42,7 @@ public class FormFragment extends Fragment {
 		return new OnClickListener() {			
 			@Override
 			public void onClick(View v) {
-				final EditText editText = (EditText) vista.findViewById(R.id.my_textview);;
+				final EditText editText = (EditText) vista.findViewById(R.id.my_textview);
 				formListener.pushOk(editText.getText().toString());				
 			}
 		};
@@ -49,7 +51,7 @@ public class FormFragment extends Fragment {
 		return new OnClickListener() {			
 			@Override
 			public void onClick(View v) {
-				final EditText editText = (EditText) vista.findViewById(R.id.my_textview);;
+				final EditText editText = (EditText) vista.findViewById(R.id.my_textview);
 				formListener.pushCancel(editText.getText().toString());				
 			}
 		};

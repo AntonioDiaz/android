@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="5dp"
-        android:text="@string/title_fragment_01"
+        android:text="@string/title_fragment_simple"
         android:textSize="18sp" />
 
     <LinearLayout
