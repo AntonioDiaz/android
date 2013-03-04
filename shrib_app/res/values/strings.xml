@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">shrib_app</string>
+    <string name="action_settings">Settings</string>
+    <string name="url">http://shrib.com/</string>
+    <string name="save">save</string>    
+    <string name="share">share</string>    
+    <string name="text_test">digoooo</string>
+    <string name="preferences">Preferences</string>
+    <string name="notepad_id">notepad id:</string>
+    <string name="accept">accept</string>
+
+</resources>
