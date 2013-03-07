@@ -24,6 +24,7 @@
         <activity android:name="com.example.fragments.simple.FragmentSimpleActivity" ></activity>
         <activity android:name="com.example.fragments.list.MobileListActivity"></activity>
         <activity android:name="com.example.fragments.list.MobileImageActivity"></activity>
+        <activity android:name="com.example.fragments.list.TabletActivity"></activity>
         <activity android:name="com.example.fragments.withoutfragments.ListNoFragmentsActivity" ></activity>
         <activity android:name="com.example.fragments.withoutfragments.ImagenNoFragmentsActivity" ></activity>        
     </application>

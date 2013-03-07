@@ -7,12 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.example.fragments.list.MobileListActivity;
+import com.example.fragments.list.TabletActivity;
 import com.example.fragments.simple.FragmentSimpleActivity;
 import com.example.fragments.withoutfragments.ListNoFragmentsActivity;
-import com.example.fragments.R;
 
 public class MainActivity extends Activity {
 
@@ -66,7 +65,7 @@ public class MainActivity extends Activity {
 		return new OnClickListener() {			
 			@Override
 			public void onClick(View v) {
-				Toast.makeText(context, "not implemented, yet", Toast.LENGTH_SHORT).show();
+				startActivity(new Intent (context, TabletActivity.class));
 			}
 		};
 	}

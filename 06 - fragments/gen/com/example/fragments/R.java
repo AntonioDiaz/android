@@ -31,9 +31,11 @@ public final class R {
         public static final int button_show=0x7f070005;
         public static final int button_test=0x7f070004;
         public static final int container=0x7f070007;
+        public static final int container_image=0x7f070011;
+        public static final int container_list=0x7f070010;
         public static final int image=0x7f07000c;
         public static final int image_no_fragments=0x7f07000e;
-        public static final int menu_settings=0x7f070010;
+        public static final int menu_settings=0x7f070012;
         public static final int my_fragment=0x7f070000;
         public static final int my_textview=0x7f070001;
         public static final int no_fragments_list=0x7f07000f;
@@ -49,6 +51,7 @@ public final class R {
         public static final int mobile_layout=0x7f030006;
         public static final int no_fragments_img_activity=0x7f030007;
         public static final int no_fragments_list_activity=0x7f030008;
+        public static final int tablet_layout=0x7f030009;
     }
     public static final class menu {
         public static final int activity_main=0x7f060000;
