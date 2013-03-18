@@ -156,7 +156,7 @@ public class MainActivity extends Activity {
 				Button button = (Button)findViewById(R.id.button_thread_stop);
 				button.performClick();
 				threadHandler = new ThreadHandler(handler);
-				threadHandler.run();
+				threadHandler.start();
 			}
 		};
 	}
