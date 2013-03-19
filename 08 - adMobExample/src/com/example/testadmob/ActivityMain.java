@@ -23,7 +23,7 @@ import com.google.ads.AdView;
 public class ActivityMain extends Activity implements AdListener {
 
 	private AdView adView;
-	private String MY_AD_UNIT_ID = "a15146fe1eef10e";
+	private String MY_AD_UNIT_ID = "";
 	public static final long TIME_SHOWING_AD = 5000;
 	private ActivityMain context;
 	
