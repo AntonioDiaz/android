@@ -24,7 +24,7 @@ public class ActivityMain extends Activity implements AdListener {
 
 	private AdView adView;
 	private String MY_AD_UNIT_ID = "a15146fe1eef10e";
-	public static final long TIME_SHOWING_AD = 10000;
+	public static final long TIME_SHOWING_AD = 5000;
 	private ActivityMain context;
 	
 	
@@ -38,19 +38,21 @@ public class ActivityMain extends Activity implements AdListener {
 		LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
 		params.gravity = Gravity.BOTTOM;
 		linearLayout.addView(adView, params);
-		AdRequest adRequest = new AdRequest();
-		adRequest.addTestDevice(AdRequest.TEST_EMULATOR);
-		adView.setAdListener(this);
-		adView.loadAd(adRequest);
-		
+		refreshAdd();		
 		Button button;
 		button = (Button) findViewById(R.id.show);
 		button.setOnClickListener(showListener());
 		button = (Button) findViewById(R.id.hide);
 		button.setOnClickListener(hideListener());
+		button = (Button) findViewById(R.id.refresh);
+		button.setOnClickListener(refreshListener());
+	}
 
-		
-		
+	private void refreshAdd() {
+		AdRequest adRequest = new AdRequest();
+		adRequest.addTestDevice(AdRequest.TEST_EMULATOR);
+		adView.setAdListener(this);
+		adView.loadAd(adRequest);
 	}
 
 	private void hideAdd() {
@@ -59,7 +61,7 @@ public class ActivityMain extends Activity implements AdListener {
 			adLayout.removeView(adView);
 		}
 	}
-
+	
 	private void showAd() {
 		if (adView!=null && !adView.isShown()) {
 			LinearLayout adLayout = (LinearLayout) findViewById(R.id.ad_layout);
@@ -83,6 +85,15 @@ public class ActivityMain extends Activity implements AdListener {
 			@Override
 			public void onClick(View v) {
 				showAd();
+			}
+		};
+	}
+	
+	private OnClickListener refreshListener() {
+		return new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				refreshAdd();
 			}
 		};
 	}
@@ -133,8 +144,5 @@ public class ActivityMain extends Activity implements AdListener {
 		MyThreadHandler mThreadHandler = new MyThreadHandler();
 		mThreadHandler.setHandler(myHandler);
 		mThreadHandler.start();
-		
 	}
-
-	
 }

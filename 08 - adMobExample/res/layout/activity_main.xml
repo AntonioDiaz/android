@@ -32,6 +32,12 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:text="@string/hide" />
+        <Button
+            android:id="@+id/refresh"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/refresh" />        
     </LinearLayout>
     <LinearLayout
         android:id="@+id/ad_layout"

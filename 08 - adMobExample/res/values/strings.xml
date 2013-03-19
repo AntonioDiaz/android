@@ -6,5 +6,6 @@
     <string name="hello_world">Testing adMob</string>
     <string name="show">show</string>
     <string name="hide">hide</string>
+    <string name="refresh">refresh</string>
 
 </resources>
